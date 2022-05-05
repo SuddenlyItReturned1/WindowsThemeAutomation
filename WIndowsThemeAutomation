@@ -38,7 +38,7 @@ def compareTime(changeTime):
     else:
         return False
 
-# CHeck if dark mode is currently on
+# Check if dark mode is currently on
 def darkmode_is_enabled(): 
     registry = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
     reg_keypath = r'SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize'
@@ -56,8 +56,7 @@ def darkmode_is_enabled():
             break
     return False
 
-
-
+# if __name__ == "__main__" because obviously
 if __name__ == "__main__":
     while True:
         if compareTime(change_theme_to_dark_time) == True:
